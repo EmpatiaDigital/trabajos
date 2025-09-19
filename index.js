@@ -30,6 +30,11 @@ app.use('/api/perfil', perfilRoute(upload));
 app.use('/api/contratacion', contratacionRoute);
 app.use('/api/calificacion', calificacionRoute);
 
+// RUTA TEST ============
+app.get('/api/test', (req, res) => {
+  res.json({ message: "Este es el backend de RedOficios" });
+});
+
 // Puerto
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
